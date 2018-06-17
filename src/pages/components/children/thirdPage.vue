@@ -8,7 +8,10 @@
 </template>
 <script>
 export default {
-  name: "ThirdPage"
+  name: "ThirdPage",
+  props: {
+    turnOnThirdAnimation: Boolean
+  }
 };
 </script>
 <style lang="stylus" scoped>

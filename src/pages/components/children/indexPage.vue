@@ -3,9 +3,13 @@
     <div class="profileContainer">
       <img class="profile" src="/api/profile.jpg" alt="">
     </div>
-    <div class="helloName">Aloha!我叫常益铭</div>
-    <div class="helloSaying">一腔热血的激情 · 一个像素的执着</div>
-    <div class="careePositon">web前端工程师</div>
+    <transition name="fadein" appear enter-active-class="animated fadeInDown" appear-active-class="animated fadeInDown">
+      <div class="helloName" v-show="turnOnIndexAnimation">Aloha!我叫常益铭</div>
+    </transition>
+    <transition-group name="fadeinup" appear enter-active-class="animated fadeInUp" appear-active-class="animated fadeInUp">
+      <div class="helloSaying" key="helloSaying" v-show="turnOnIndexAnimation">一腔热血的激情 · 一个像素的执着</div>
+      <div class="careePositon" key="careePositon" v-show="turnOnIndexAnimation">web前端工程师</div>
+    </transition-group>
     <el-button type="text" class="readmeBtn" @click="dialogVisible = true"><span class="btnText">ReadMe.md</span></el-button>
 
     <el-dialog :visible.sync="dialogVisible" width="60%" lock-scroll append-to-body>
@@ -33,18 +37,23 @@
 
       </div>
       <span slot="footer" class="dialog-footer">
-      <el-button @click="dialogVisible = false">关闭</el-button>
-    </span>
+        <el-button @click="dialogVisible = false">关闭</el-button>
+      </span>
     </el-dialog>
 
   </div>
 </template>
 
 <script>
+import animate from "animate.css";
 export default {
   name: "IndexPage",
+  props: {
+    turnOnIndexAnimation: Boolean
+  },
   data() {
     return {
+      defaltAnimate: true,
       dialogVisible: false,
       swiperOption: {
         mousewheel: true,

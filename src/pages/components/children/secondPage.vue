@@ -20,7 +20,10 @@
 </template>
 <script>
 export default {
-  name: "SecondPage"
+  name: "SecondPage",
+  props: {
+    turnOnSecondAnimation: Boolean
+  }
 };
 </script>
 <style lang="stylus" scoped>

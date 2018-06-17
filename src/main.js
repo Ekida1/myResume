@@ -10,6 +10,7 @@ import {
   Button,
   Dialog,
 } from 'element-ui';
+// import animate from 'animate.css';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
@@ -19,6 +20,7 @@ import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false;
 Vue.use(VueAwesomeSwiper);
+// Vue.use(animate);
 Vue.use(Button);
 Vue.use(Dialog);
 // Vue.use(BootstrapVue);
