@@ -53,7 +53,6 @@ export default {
   },
   data() {
     return {
-      defaltAnimate: true,
       dialogVisible: false,
       swiperOption: {
         mousewheel: true,
@@ -155,12 +154,12 @@ export default {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     animation-timing-function: ease-in-out;
     animation-name: breathe;
-    animation-duration: 2700ms;
+    animation-duration: 2200ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-name: breathe;
-    -webkit-animation-duration: 2000ms;
+    -webkit-animation-duration: 2200ms;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
 
