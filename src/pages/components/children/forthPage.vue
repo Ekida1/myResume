@@ -10,7 +10,7 @@
         <br>
         <span class="ptext">我的个人网站。
               <br>
-              <a href="http://lengziyu.com">http://lengziyu.com</a>
+              <a href="">xxx</a>
             </span>
             </div>
       </li>
@@ -22,7 +22,7 @@
         <br>
         <span class="ptext">用Vue搭建的导航网。
               <br>
-              <a href="http://fenav.com">http://fenav.com</a>
+              <a href="">xxxbbb</a>
             </span>
         </div>
       </li>
@@ -34,7 +34,7 @@
         <br>
         <span class="ptext">用React+jPlayer插件搭建的web音乐播放器。
                 <br>
-                <a href="http://createjs.cc">http://createjs.cc</a>
+                <a href="">xxxccc</a>
               </span>
         </div>
       </li>
@@ -42,9 +42,9 @@
         <i class="el-icon-share litteicon"></i>
         <i class="el-icon-star-on staricon"></i>
         <div class="textBox">
-        <span class="ptext">Github博客</span>
+        <span class="ptext">更多关注Github</span>
         <br>
-        <span class="ptext">在Github上搭建的blog。
+        <span class="ptext">在Github查看更多。
                 <br>
                 <a href="https://github.com/Ekida1">https://github.com/Ekida1</a>
               </span>
