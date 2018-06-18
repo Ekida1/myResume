@@ -5,22 +5,22 @@
     <ul class="labelGroups">
       <!-- <transition-group name="bounce" appear enter-active-class="animated fadeInDown" appear-active-class="animated fadeInDown"> -->
         <!-- v-show="turnOnSecondAnimation" -->
-        <li class="skillLabel" key="HTML" v-show="turnOnSecondAnimation">HTML/HTML5</li>
-        <li class="skillLabel" key="CSS" v-show="turnOnSecondAnimation">CSS/CSS3</li>
-        <li class="skillLabel" key="JavaScript" v-show="turnOnSecondAnimation">JavaScript</li>
-        <li class="skillLabel" key="AngularJs" v-show="turnOnSecondAnimation">AngularJs</li>
-        <li class="skillLabel" key="Vue" v-show="turnOnSecondAnimation">Vue.js</li>
-        <li class="skillLabel" key="React" v-show="turnOnSecondAnimation">React</li>
-        <li class="skillLabel" key="Animate" v-show="turnOnSecondAnimation">Animate.css</li>
-        <li class="skillLabel" key="Github" v-show="turnOnSecondAnimation">Git/Github</li>
-        <li class="skillLabel" key="Gulp" v-show="turnOnSecondAnimation">Gulp</li>
-        <li class="skillLabel" key="Grunt" v-show="turnOnSecondAnimation">Grunt</li>
-        <li class="skillLabel" key="chart" v-show="turnOnSecondAnimation">E-chart</li>
-        <li class="skillLabel" key="D3" v-show="turnOnSecondAnimation">D3.js</li>
-        <li class="skillLabel" key="Visula" v-show="turnOnSecondAnimation">Visula Studio Code</li>
+        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="HTML">HTML/HTML5</li>
+        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="CSS">CSS/CSS3</li>
+        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="JavaScript">JavaScript</li>
+        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="AngularJs">AngularJs</li>
+        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="Vue">Vue.js</li>
+        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="React">React</li>
+        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="Animate">Animate.css</li>
+        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="Github">Git/Github</li>
+        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="Gulp">Gulp</li>
+        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="Grunt">Grunt</li>
+        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="chart">E-chart</li>
+        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="D3">D3.js</li>
+        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="Visula">Visula Studio Code</li>
       <!-- </transition-group> -->
     </ul>
-
+    <img class="resumeFooter" src="/api/greenfooter.png" alt="">
  </div>
 </template>
 <script>
@@ -68,49 +68,67 @@ export default {
       border-radius: 8px;
       line-height: 40px;
       text-align: center;
-      background: #20B2AA;
+      background: #37DDC4;
       font-size: 0.4rem;
       letter-spacing: 0.5px;
       color: #fff;
       cursor: pointer;
-      border: 1px solid #2b92d4;
+      // border: 1px solid #2b92d4;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-      // animation: showIn 1700ms ease both;
-      // -webkit-animation: showIn 1700ms ease both;
+      animation: showIn 1700ms ease both, breathe 2200ms ease-in-out 1800ms infinite alternate;
+      -webkit-animation: showIn 1700ms ease both, breathe 2200ms ease-in-out 1800ms infinite alternate;
 
-      // @keyframes showIn {
-      // 0% {
-      // height: 10px;
-      // }
+      @keyframes showIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.6, 0.5);
+        }
 
-      // 100% {
-      // height: 40px;
-      // }
-      // }
-      animation-timing-function: ease-in-out;
-      animation-name: breathe;
-      animation-duration: 2200ms;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
-      // animation-delay: 1800ms;
-      -webkit-animation-timing-function: ease-in-out;
-      -webkit-animation-name: breathe;
-      -webkit-animation-duration: 2200ms;
-      -webkit-animation-iteration-count: infinite;
-      -webkit-animation-direction: alternate;
+        100% {
+          opacity: 1;
+          transform: scale(1, 1);
+        }
+      }
 
-      // -webkit-animation-delay: 1800ms;
       @keyframes breathe {
         0% {
-          opacity: 0.3;
+          opacity: 1;
           box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
         }
 
         100% {
           opacity: 1;
-          border: 1px solid rgba(59, 235, 235, 1);
+          // border: 1px solid rgba(59, 235, 235, 1);
           box-shadow: 0 1px 30px rgba(59, 255, 255, 1);
         }
+      }
+    }
+
+    .sl2 {
+      background: #22C3AA;
+      animation-delay: 800ms;
+      -webkit-animation-delay: 800ms;
+    }
+  }
+
+  .resumeFooter {
+    position: absolute;
+    bottom: 69px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 10%;
+    // background: url('/api/bluefooter.png') repeat-x 0 0;
+    animation: Xscroll 10000ms linear infinite alternate;
+    -webkit-animation: Xscroll 10000ms linear infinite alternate;
+
+    @keyframes Xscroll {
+      0% {
+        transform: translateX(-50px);
+      }
+
+      100% {
+        transform: translateX(100px);
       }
     }
   }

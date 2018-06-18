@@ -1,5 +1,6 @@
 <template>
   <div class="basement">
+    <a href="https://github.com/Ekida1/myResume"><img class="githubtag" src="/api/githubtag.png" alt=""></a>
     <!-- Optional controls -->
     <swiper :options="swiperOption" ref="bigSwiper">
       <!-- slides -->
@@ -153,6 +154,13 @@ export default {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+
+  .githubtag {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+  }
 
   .swiper-pagination {
     position: fixed;

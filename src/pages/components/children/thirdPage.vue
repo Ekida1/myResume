@@ -2,7 +2,6 @@
   <div class="basement">
     <div class="thirdTitle">工作经验</div>
     <ul class="content">
-
       <li class="workItem yearItem">
         <span class="yearFlag">2017年</span>
         <i class="el-icon-time timeIcon"></i>
