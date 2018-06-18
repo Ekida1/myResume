@@ -42,7 +42,7 @@ export default {
 
   .secondTitle {
     position: absolute;
-    top: 170px;
+    top: 120px;
     right: 0;
     left: 0;
     text-align: center;
@@ -53,11 +53,14 @@ export default {
 
   .labelGroups {
     position: absolute;
-    top: 250px;
+    top: 200px;
     right: 0;
     left: 0;
     margin: 0 auto;
-    width: 500px;
+    padding: 0 20px;
+    // width: 500px;
+    max-width: 500px;
+    min-width: 160px;
 
     .skillLabel {
       display: inline-block;
@@ -113,7 +116,7 @@ export default {
 
   .resumeFooter {
     position: absolute;
-    bottom: 69px;
+    bottom: 8%;
     left: 0;
     right: 0;
     width: 100%;

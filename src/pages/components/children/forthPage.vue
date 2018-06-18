@@ -75,7 +75,7 @@ export default {
 
   .forthTitle {
     position: absolute;
-    top: 170px;
+    top: 120px;
     right: 0;
     left: 0;
     text-align: center;
@@ -86,19 +86,21 @@ export default {
 
   .boxcontent {
     position: absolute;
-    top: 250px;
+    top: 200px;
     right: 0;
     left: 0;
     margin: 0 auto;
+    padding: 0 5px;
     text-align: center;
-    width: 850px;
+    max-width: 750px;
+    min-width: 350px;
 
     .projectBox {
       display: inline-block;
-      width: 380px;
+      min-width: 340px;
       height: 80px;
       border: 1px solid #fff;
-      margin: 5px 8px;
+      margin: 10px 8px;
       animation: bounceinDown 1.3s ease both;
       -webkit-animation: bounceinDown 1.3s ease both;
 
@@ -159,7 +161,7 @@ export default {
 
   .resumeFooter {
     position: absolute;
-    bottom: 69px;
+    bottom: 8%;
     left: 0;
     right: 0;
     width: 100%;

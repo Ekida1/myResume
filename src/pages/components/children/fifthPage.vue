@@ -30,7 +30,7 @@ export default {
 
   .fifthTitle {
     position: absolute;
-    top: 170px;
+    top: 120px;
     right: 0;
     left: 0;
     text-align: center;
@@ -41,11 +41,13 @@ export default {
 
   .content {
     position: absolute;
-    top: 250px;
+    top: 200px;
     right: 0;
     left: 0;
     margin: 0 auto;
-    width: 600px;
+    padding: 0 50px;
+    max-width: 580px;
+    min-width: 300px;
     color: #fff;
 
     .ptext {
@@ -61,7 +63,7 @@ export default {
 
   .resumeFooter {
     position: absolute;
-    bottom: 69px;
+    bottom: 8%;
     left: 0;
     right: 0;
     width: 100%;

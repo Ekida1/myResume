@@ -89,7 +89,7 @@ export default {
 
   .profileContainer {
     position: absolute;
-    top: 180px;
+    top: 130px;
     right: 0;
     left: 0;
     text-align: center;
@@ -103,7 +103,7 @@ export default {
 
   .helloName {
     position: absolute;
-    top: 400px;
+    top: 350px;
     right: 0;
     left: 0;
     text-align: center;
@@ -115,7 +115,7 @@ export default {
 
   .helloSaying {
     position: absolute;
-    top: 450px;
+    top: 400px;
     right: 0;
     left: 0;
     text-align: center;
@@ -126,7 +126,7 @@ export default {
 
   .careePositon {
     position: absolute;
-    top: 500px;
+    top: 450px;
     right: 0;
     left: 0;
     text-align: center;
@@ -136,7 +136,7 @@ export default {
 
   .readmeBtn {
     position: absolute;
-    top: 550px;
+    top: 500px;
     right: 0;
     left: 0;
     margin: 0 auto;

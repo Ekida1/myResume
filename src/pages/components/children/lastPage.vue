@@ -1,7 +1,7 @@
 <template>
 <div class="basement">
     <div class="lastTitle">联系方式/社交账号</div>
-    <ul class="content">
+    <ul class="content" ref="textContent">
       <li><p class="ptext">邮箱:cymdidi@sina.com</p></li>
       <li><p class="ptext">QQ: 583602732</p></li>
       <li><p class="ptext">手机:18523482459</p></li>
@@ -20,7 +20,7 @@
     </ul>
     <img class="resumeFooter" src="/api/bluefooter.png" alt="">
     <!-- <div class="resumeFooter"></div> -->
-        <el-dialog :visible.sync="wechatDialogVisible" width="40%" lock-scroll append-to-body>
+        <el-dialog :visible.sync="wechatDialogVisible" width="60%" lock-scroll append-to-body>
       <span slot="title" class="dialog-title">{{wechatdialogTitle}}</span>
       <div class="dialogContent">
         <img class="wechatQRcode" src="/api/wechatfriend.jpg" alt="">
@@ -31,7 +31,7 @@
     </el-dialog>
 
 
-        <el-dialog :visible.sync="phoneCheckDialogVisible" width="40%" lock-scroll append-to-body>
+        <el-dialog :visible.sync="phoneCheckDialogVisible" width="60%" lock-scroll append-to-body>
       <span slot="title" class="dialog-title">{{wechatdialogTitle}}</span>
       <div class="dialogContent">
         <img class="phoneQRcode" src="/api/wechatfriend.jpg" alt="">
@@ -45,6 +45,9 @@
 <script>
 export default {
   name: "LastPage",
+  props: {
+    turnOnLastAnimation: Boolean
+  },
   data() {
     return {
       wechatdialogTitle: "扫一扫加好友",
@@ -52,9 +55,6 @@ export default {
       wechatdialogTitle: "扫一扫手机查看",
       phoneCheckDialogVisible: false
     };
-  },
-  props: {
-    turnOnLastAnimation: Boolean
   }
 };
 </script>
@@ -68,28 +68,30 @@ export default {
 
   .lastTitle {
     position: absolute;
-    top: 170px;
+    top: 120px;
     right: 0;
     left: 0;
-    margin: 0 auto;
     text-align: center;
     color: #fff;
     font-size: 32px;
-    min-width: 600px;
     letter-spacing: 2px;
   }
 
   .content {
     position: absolute;
-    top: 250px;
+    top: 200px;
     right: 0;
     left: 0;
     margin: 0 auto;
+    padding: 0 12px;
     text-align: center;
-    width: 600px;
+    max-width: 580px;
+    min-width: 300px;
     color: #fff;
 
     .ptext {
+      // position: relative;
+      // left: 140px;
       font-size: 20px;
       height: 40px;
       line-height: 40px;
@@ -213,7 +215,7 @@ export default {
 
   .resumeFooter {
     position: absolute;
-    bottom: 69px;
+    bottom: 8%;
     left: 0;
     right: 0;
     width: 100%;

@@ -77,7 +77,7 @@ export default {
 
   .thirdTitle {
     position: absolute;
-    top: 170px;
+    top: 120px;
     right: 0;
     left: 0;
     text-align: center;
@@ -88,11 +88,12 @@ export default {
 
   .content {
     position: absolute;
-    top: 250px;
+    top: 200px;
     right: 0;
     left: 0;
     margin: 0 auto;
-    width: 600px;
+    max-width: 600px;
+    min-width: 400px;
     color: #fff;
 
     .timeAxisBox {
@@ -129,7 +130,7 @@ export default {
         position: relative;
         left: 60px;
         bottom: 52px;
-        width: 400px;
+        max-width: 350px;
         height: 35px;
         line-height: 35px;
         border-radius: 4px;
