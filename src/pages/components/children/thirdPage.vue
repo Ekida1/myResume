@@ -45,14 +45,14 @@
           <div class="labelText lt5" key="5th" v-show="turnOnThirdAnimation">从拓尔思申请辞职，现已离职</div>
         <!-- </transition> -->
       </li>
-      <li class="workItem monthIteam">
+      <li class="workItem monthIteam lastli">
         <span class="monthFlag">06月</span>
-        <i class="el-icon-location-outline circleIcon"></i>
+        <i class="el-icon-location-outline circleIcon lastIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
           <div class="labelText lt6" key="6th" v-show="turnOnThirdAnimation">自我巩固Vuejs技术+帮朋友接项目,并正在寻找合适的工作中...</div>
         <!-- </transition> -->
       </li>
-      <!-- <li class="timeAxisBox"></li> -->
+      <li class="timeAxisBox"></li>
     </ul>
   </div>
 </template>
@@ -92,22 +92,25 @@ export default {
     right: 0;
     left: 0;
     margin: 0 auto;
+    padding: 0 0px;
     max-width: 600px;
-    min-width: 400px;
-    // padding: 0 8px;
+    min-width: 300px;
     color: #fff;
 
-    // .timeAxisBox {
-    // height: 450px;
-    // width: 5px;
-    // border-radius: 8px;
-    // z-index: 0;
-    // background-color: #F59D43;
-    // position: absolute;
-    // left: 11%;
-    // top: -1%;
-    // }
+    .timeAxisBox {
+      content: '';
+      height: 450px;
+      width: 5px;
+      border-radius: 8px;
+      z-index: 0;
+      background-color: #F59D43;
+      position: absolute;
+      left: 65px;
+      top: -10px;
+    }
+
     .workItem {
+      width: auto;
       z-index: 2;
 
       .yearFlag {
@@ -219,18 +222,6 @@ export default {
     .yearItem {
       position: relative;
     }
-  }
-
-  .content:after {
-    content: '';
-    height: 450px;
-    width: 5px;
-    border-radius: 8px;
-    z-index: 0;
-    background-color: #F59D43;
-    position: absolute;
-    left: 11%;
-    top: -1%;
   }
 }
 
