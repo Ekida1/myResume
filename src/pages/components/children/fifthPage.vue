@@ -30,7 +30,7 @@ export default {
 
   .fifthTitle {
     position: absolute;
-    top: 120px;
+    top: 100px;
     right: 0;
     left: 0;
     text-align: center;
@@ -41,7 +41,7 @@ export default {
 
   .content {
     position: absolute;
-    top: 200px;
+    top: 150px;
     right: 0;
     left: 0;
     margin: 0 auto;

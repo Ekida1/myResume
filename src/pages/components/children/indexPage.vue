@@ -12,12 +12,12 @@
     </transition-group>
     <el-button type="text" class="readmeBtn" @click="dialogVisible = true"><span class="btnText">ReadMe.md</span></el-button>
 
-    <el-dialog :visible.sync="dialogVisible" width="60%" lock-scroll append-to-body>
+    <el-dialog :visible.sync="dialogVisible" custom-class="fileModal" :lock-scroll="true" :modal-append-to-body="false">
       <span slot="title" class="dialog-title">基本资料</span>
       <div class="dialogContent">
         <swiper :options="swiperOption" ref="pageSwiper">
           <swiper-slide>
-            <img class="cartoon" src="/api/cartoon.jpg" alt="">
+            <img class="cartoon" src="/api/cartoon.png" alt="">
             <p>姓名:&nbsp;常益铭</p>
             <p>年龄:&nbsp;23岁</p>
             <p>工作经验:&nbsp;半年</p>
@@ -29,16 +29,16 @@
             <p>●主修技能：</p>
             <p>语言: html, css, less, javaScript(ES5, ES6)</p>
             <p>框架: jQuery, AngularJS（1.5版本）, Vue2.0 初学D3.js, E-chart，Bootstrap</p>
-            <p>工具: VS Code, Git，Gulp，Grunt</p>
+            <p>工具: VSCode, Git，Gulp等</p>
           </swiper-slide>
           <div class="swiper-button-prev" slot="pagination"></div>
           <div class="swiper-button-next" slot="pagination"></div>
         </swiper>
 
       </div>
-      <span slot="footer" class="dialog-footer">
+      <!-- <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">关闭</el-button>
-      </span>
+      </span> -->
     </el-dialog>
 
   </div>
@@ -55,7 +55,7 @@ export default {
     return {
       dialogVisible: false,
       swiperOption: {
-        mousewheel: true,
+        // mousewheel: true,
         effect: "flip",
         navigation: {
           prevEl: ".swiper-button-prev",
@@ -80,6 +80,12 @@ export default {
   right: -50px;
 }
 
+.basement >>> .fileModal {
+  max-width: 90%;
+  min-width: 40%;
+  max-height: 60%;
+}
+
 .basement {
   width: 100%;
   height: 100vh;
@@ -89,7 +95,7 @@ export default {
 
   .profileContainer {
     position: absolute;
-    top: 130px;
+    top: 100px;
     right: 0;
     left: 0;
     text-align: center;
@@ -103,7 +109,7 @@ export default {
 
   .helloName {
     position: absolute;
-    top: 350px;
+    top: 300px;
     right: 0;
     left: 0;
     text-align: center;
@@ -115,7 +121,7 @@ export default {
 
   .helloSaying {
     position: absolute;
-    top: 400px;
+    top: 350px;
     right: 0;
     left: 0;
     text-align: center;
@@ -126,7 +132,7 @@ export default {
 
   .careePositon {
     position: absolute;
-    top: 450px;
+    top: 400px;
     right: 0;
     left: 0;
     text-align: center;
@@ -136,7 +142,7 @@ export default {
 
   .readmeBtn {
     position: absolute;
-    top: 500px;
+    top: 450px;
     right: 0;
     left: 0;
     margin: 0 auto;
@@ -196,10 +202,18 @@ export default {
   line-height: 55px;
 
   .cartoon {
-    float: right;
+    position: absolute;
+    left: 75%;
+    top: 0;
     margin-right: 30px;
     width: 120px;
     height: 120px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .basement >>> .fileModal {
+    width: 90%;
   }
 }
 </style>

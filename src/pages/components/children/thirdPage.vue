@@ -24,14 +24,14 @@
         <span class="monthFlag">10月</span>
         <i class="el-icon-location-outline circleIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
-          <div class="labelText lt3" key="3rd" v-show="turnOnThirdAnimation">从国企辞职，在朋友公司做项目</div>
+          <div class="labelText lt3" key="3rd" v-show="turnOnThirdAnimation">从国企辞职，在朋友公司做项目,并接触react框架技术</div>
         <!-- </transition> -->
       </li>
       <li class="workItem monthIteam">
         <span class="monthFlag">11月</span>
         <i class="el-icon-location-outline circleIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
-          <div class="labelText lt4" key="4th" v-show="turnOnThirdAnimation">11月底进入第一家计算机产业公司(拓尔思成都研发中心)</div>
+          <div class="labelText lt4" key="4th" v-show="turnOnThirdAnimation">11月底进入第一家计算机产业公司(拓尔思成都研发中心)，接触AngularJS1版本技术</div>
         <!-- </transition> -->
       </li>
       <li class="workItem yearItem">
@@ -49,10 +49,10 @@
         <span class="monthFlag">06月</span>
         <i class="el-icon-location-outline circleIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
-          <div class="labelText lt6" key="6th" v-show="turnOnThirdAnimation">自我巩固+帮朋友接项目,并正在寻找合适的工作中...</div>
+          <div class="labelText lt6" key="6th" v-show="turnOnThirdAnimation">自我巩固Vuejs技术+帮朋友接项目,并正在寻找合适的工作中...</div>
         <!-- </transition> -->
       </li>
-      <li class="timeAxisBox"></li>
+      <!-- <li class="timeAxisBox"></li> -->
     </ul>
   </div>
 </template>
@@ -72,12 +72,12 @@ export default {
   width: 100%;
   height: 100vh;
   padding: 50px;
-  overflow: hidden;
+  // overflow: hidden;
   box-sizing: border-box;
 
   .thirdTitle {
     position: absolute;
-    top: 120px;
+    top: 100px;
     right: 0;
     left: 0;
     text-align: center;
@@ -88,25 +88,25 @@ export default {
 
   .content {
     position: absolute;
-    top: 200px;
+    top: 150px;
     right: 0;
     left: 0;
     margin: 0 auto;
     max-width: 600px;
     min-width: 400px;
+    // padding: 0 8px;
     color: #fff;
 
-    .timeAxisBox {
-      height: 450px;
-      width: 5px;
-      border-radius: 8px;
-      z-index: 0;
-      background-color: #F59D43;
-      position: absolute;
-      left: 11%;
-      top: -1%;
-    }
-
+    // .timeAxisBox {
+    // height: 450px;
+    // width: 5px;
+    // border-radius: 8px;
+    // z-index: 0;
+    // background-color: #F59D43;
+    // position: absolute;
+    // left: 11%;
+    // top: -1%;
+    // }
     .workItem {
       z-index: 2;
 
@@ -130,11 +130,13 @@ export default {
         position: relative;
         left: 60px;
         bottom: 52px;
-        max-width: 350px;
-        height: 35px;
+        min-width: 300px;
+        max-width: 450px;
+        min-height: 35px;
         line-height: 35px;
         border-radius: 4px;
         padding: 0 10px;
+        overflow-x: visible;
         background-color: #ED9235;
         animation: bounceinR 0.8s ease both;
         -webkit-animation: bounceinR 0.8s ease both;
@@ -217,6 +219,24 @@ export default {
     .yearItem {
       position: relative;
     }
+  }
+
+  .content:after {
+    content: '';
+    height: 450px;
+    width: 5px;
+    border-radius: 8px;
+    z-index: 0;
+    background-color: #F59D43;
+    position: absolute;
+    left: 11%;
+    top: -1%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .timeAxisBox {
+    left: 16.5%;
   }
 }
 </style>

@@ -75,7 +75,7 @@ export default {
 
   .forthTitle {
     position: absolute;
-    top: 120px;
+    top: 100px;
     right: 0;
     left: 0;
     text-align: center;
@@ -86,7 +86,7 @@ export default {
 
   .boxcontent {
     position: absolute;
-    top: 200px;
+    top: 150px;
     right: 0;
     left: 0;
     margin: 0 auto;
@@ -98,7 +98,7 @@ export default {
     .projectBox {
       display: inline-block;
       min-width: 340px;
-      height: 80px;
+      height: 85px;
       border: 1px solid #fff;
       margin: 10px 8px;
       animation: bounceinDown 1.3s ease both;
@@ -136,8 +136,8 @@ export default {
 
         .ptext {
           display: inline-block;
-          height: 25px;
-          line-height: 25px;
+          height: 30px;
+          line-height: 30px;
           color: #fff;
           clear: both;
         }
@@ -152,10 +152,6 @@ export default {
     .pb4 {
       animation-delay: 600ms;
       -webkit-animation-delay: 600ms;
-    }
-
-    .projectBox:hover {
-      transform: scale(2, 2);
     }
   }
 

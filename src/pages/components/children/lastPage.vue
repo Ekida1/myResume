@@ -1,47 +1,53 @@
 <template>
-<div class="basement">
+  <div class="basement">
     <div class="lastTitle">联系方式/社交账号</div>
     <ul class="content" ref="textContent">
-      <li><p class="ptext">邮箱:cymdidi@sina.com</p></li>
-      <li><p class="ptext">QQ: 583602732</p></li>
-      <li><p class="ptext">手机:18523482459</p></li>
+      <li>
+        <p class="ptext">邮箱:cymdidi@sina.com</p>
+      </li>
+      <li>
+        <p class="ptext">QQ: 583602732</p>
+      </li>
+      <li>
+        <p class="ptext">手机:18523482459</p>
+      </li>
       <li class="socialmedia">
-        <a href="https://github.com/Ekida1"  target="_blank"><img class="socialmediaicon github" v-show="turnOnLastAnimation" key="github" src="/api/call_github_27ab678.png" alt=""></a>
-        <a href="https://www.zhihu.com/people/chang-yi-ming-18/activities" target="_blank"><img class="socialmediaicon zhihu" v-show="turnOnLastAnimation"  key="zhihu" src="/api/call_zhihu_4567c70.png" alt=""></a>
+        <a href="https://github.com/Ekida1" target="_blank"><img class="socialmediaicon github" v-show="turnOnLastAnimation" key="github" src="/api/call_github_27ab678.png" alt=""></a>
+        <a href="https://www.zhihu.com/people/chang-yi-ming-18/activities" target="_blank"><img class="socialmediaicon zhihu" v-show="turnOnLastAnimation" key="zhihu" src="/api/call_zhihu_4567c70.png" alt=""></a>
         <a href="https://weibo.com/coolhi/" target="_blank"><img class="socialmediaicon weibo" v-show="turnOnLastAnimation" key="weibo" src="/api/call_weibo_53e7ffa.png" alt=""></a>
         <img class="socialmediaicon wechat" @click="wechatDialogVisible = true" v-show="turnOnLastAnimation" key="wechat" src="/api/call_wx_ac6ac72.png" alt="">
       </li>
       <li class="footBtnContainer">
         <a href="/api/EkidaResume.docx" download="EkidaResume" class="fotBtn downlodaResume" v-show="turnOnLastAnimation">
-       <i class="el-icon-download"></i>下载简历
+          <i class="el-icon-download"></i>下载简历
         </a>
         <div class="fotBtn phoneCheck" @click="phoneCheckDialogVisible = true" v-show="turnOnLastAnimation"><i class="el-icon-mobile-phone"></i>手机查看</div>
       </li>
     </ul>
     <img class="resumeFooter" src="/api/bluefooter.png" alt="">
     <!-- <div class="resumeFooter"></div> -->
-        <el-dialog :visible.sync="wechatDialogVisible" width="60%" lock-scroll append-to-body>
+    <el-dialog :visible.sync="wechatDialogVisible" custom-class="QRcodeModal" lock-scroll :show-close="false" :modal-append-to-body="false">
       <span slot="title" class="dialog-title">{{wechatdialogTitle}}</span>
       <div class="dialogContent">
         <img class="wechatQRcode" src="/api/wechatfriend.jpg" alt="">
       </div>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="wechatDialogVisible = false">关闭</el-button>
-      </span>
+          <el-button @click="wechatDialogVisible = false">关闭</el-button>
+        </span>
     </el-dialog>
 
-
-        <el-dialog :visible.sync="phoneCheckDialogVisible" width="60%" lock-scroll append-to-body>
+    <el-dialog :visible.sync="phoneCheckDialogVisible" custom-class="QRcodeModal" lock-scroll :show-close="false" :modal-append-to-body="false">
       <span slot="title" class="dialog-title">{{wechatdialogTitle}}</span>
       <div class="dialogContent">
         <img class="phoneQRcode" src="/api/wechatfriend.jpg" alt="">
       </div>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="phoneCheckDialogVisible = false">关闭</el-button>
-      </span>
+          <el-button @click="phoneCheckDialogVisible = false">关闭</el-button>
+        </span>
     </el-dialog>
-</div>
+  </div>
 </template>
+
 <script>
 export default {
   name: "LastPage",
@@ -58,7 +64,12 @@ export default {
   }
 };
 </script>
+
 <style lang="stylus" scoped>
+.basement >>> .el-dialog {
+  width: 40% !important;
+}
+
 .basement {
   width: 100%;
   height: 100vh;
@@ -68,7 +79,7 @@ export default {
 
   .lastTitle {
     position: absolute;
-    top: 120px;
+    top: 100px;
     right: 0;
     left: 0;
     text-align: center;
@@ -79,7 +90,7 @@ export default {
 
   .content {
     position: absolute;
-    top: 200px;
+    top: 150px;
     right: 0;
     left: 0;
     margin: 0 auto;
@@ -249,6 +260,22 @@ export default {
 
   .phoneQRcode {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .phoneCheck {
+    display: none;
+  }
+
+  .downlodaResume {
+    padding: 0 20px !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .basement >>> .el-dialog {
+    width: 85% !important;
   }
 }
 </style>
