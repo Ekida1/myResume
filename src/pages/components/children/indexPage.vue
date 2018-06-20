@@ -28,7 +28,7 @@
           <swiper-slide>
             <p>●主修技能：</p>
             <p>语言: html, css, less, javaScript(ES5, ES6)</p>
-            <p>框架: jQuery, AngularJS（1.5版本）, Vue2.0 初学D3.js, E-chart，Bootstrap</p>
+            <p>框架: jQuery, AngularJS（1.5版本）, Vue2.0 , 初学D3.js, E-chart，Bootstrap</p>
             <p>工具: VSCode, Git，Gulp等</p>
           </swiper-slide>
           <div class="swiper-button-prev" slot="pagination"></div>

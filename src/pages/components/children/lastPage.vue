@@ -26,24 +26,24 @@
     </ul>
     <img class="resumeFooter" src="/api/bluefooter.png" alt="">
     <!-- <div class="resumeFooter"></div> -->
-    <el-dialog :visible.sync="wechatDialogVisible" custom-class="QRcodeModal" lock-scroll :show-close="false" :modal-append-to-body="false">
+    <el-dialog :visible.sync="wechatDialogVisible" custom-class="QRcodeModal" lock-scroll  :modal-append-to-body="false">
       <span slot="title" class="dialog-title">{{wechatdialogTitle}}</span>
       <div class="dialogContent">
         <img class="wechatQRcode" src="/api/wechatfriend.jpg" alt="">
       </div>
-      <span slot="footer" class="dialog-footer">
+      <!-- <span slot="footer" class="dialog-footer">
           <el-button @click="wechatDialogVisible = false">关闭</el-button>
-        </span>
+        </span> -->
     </el-dialog>
 
-    <el-dialog :visible.sync="phoneCheckDialogVisible" custom-class="QRcodeModal" lock-scroll :show-close="false" :modal-append-to-body="false">
+    <el-dialog :visible.sync="phoneCheckDialogVisible" custom-class="QRcodeModal" lock-scroll  :modal-append-to-body="false">
       <span slot="title" class="dialog-title">{{wechatdialogTitle}}</span>
       <div class="dialogContent">
         <img class="phoneQRcode" src="/api/wechatfriend.jpg" alt="">
       </div>
-      <span slot="footer" class="dialog-footer">
+      <!-- <span slot="footer" class="dialog-footer">
           <el-button @click="phoneCheckDialogVisible = false">关闭</el-button>
-        </span>
+        </span> -->
     </el-dialog>
   </div>
 </template>
