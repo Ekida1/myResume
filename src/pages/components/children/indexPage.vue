@@ -8,7 +8,7 @@
     </transition>
     <transition-group name="fadeinup" appear enter-active-class="animated fadeInUp" appear-active-class="animated fadeInUp">
       <div class="helloSaying" key="helloSaying" v-show="turnOnIndexAnimation">一腔热血的激情 · 一个像素的执着</div>
-      <div class="careePositon" key="careePositon" v-show="turnOnIndexAnimation">web前端工程师</div>
+      <div class="careePositon" key="careePositon" v-show="turnOnIndexAnimation">一个爱设计的前端工程师</div>
     </transition-group>
     <el-button type="text" class="readmeBtn" @click="dialogVisible = true"><span class="btnText">ReadMe.md</span></el-button>
 
