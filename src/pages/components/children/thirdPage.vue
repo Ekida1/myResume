@@ -10,14 +10,18 @@
         <span class="monthFlag">06月</span>
         <i class="el-icon-location-outline circleIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
-        <div class="labelText lt1" v-show="turnOnThirdAnimation">拿到大学毕业证和工科学士学位证</div>
+        <div class="labelText lt1" v-show="turnOnThirdAnimation">拿到全日制本科毕业证和工科学士学位证</div>
         <!-- </transition> -->
       </li>
       <li class="workItem monthIteam">
-        <span class="monthFlag">10月</span>
+        <span class="monthFlag">9月</span>
         <i class="el-icon-location-outline circleIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
-        <div class="labelText lt2" key="2nd" v-show="turnOnThirdAnimation">进入第一家计算机产业公司(拓尔思成都研发中心)，接触AngularJS1版本技术</div>
+        <div
+          class="labelText lt2"
+          key="2nd"
+          v-show="turnOnThirdAnimation"
+        >进入第一家计算机产业公司(拓尔思成都研发中心)，接触AngularJS1版本技术</div>
         <!-- </transition> -->
       </li>
       <li class="workItem yearItem">
@@ -25,7 +29,7 @@
         <i class="el-icon-time timeIcon"></i>
       </li>
       <li class="workItem monthIteam">
-        <span class="monthFlag">04月</span>
+        <span class="monthFlag">05月</span>
         <i class="el-icon-location-outline circleIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
         <div class="labelText lt3" key="3rd" v-show="turnOnThirdAnimation">从拓尔思申请辞职，</div>
@@ -43,17 +47,17 @@
         <i class="el-icon-time timeIcon"></i>
       </li>
       <li class="workItem monthIteam">
-        <span class="monthFlag">03月</span>
+        <span class="monthFlag">02月</span>
         <i class="el-icon-location-outline circleIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
-        <div class="labelText lt5" key="5th" v-show="turnOnThirdAnimation">现已离职</div>
+        <div class="labelText lt5" key="5th" v-show="turnOnThirdAnimation">准备从东方国信公司离职</div>
         <!-- </transition> -->
       </li>
       <li class="workItem monthIteam lastli">
-        <span class="monthFlag">04月</span>
+        <span class="monthFlag">至今</span>
         <i class="el-icon-location-outline circleIcon lastIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
-        <div class="labelText lt6" key="6th" v-show="turnOnThirdAnimation">自我巩固Vuejs技术+帮朋友接项目,并正在寻找合适的工作中...</div>
+        <div class="labelText lt6" key="6th" v-show="turnOnThirdAnimation">帮忙朋友的前端项目,并正在寻找合适的工作中...</div>
         <!-- </transition> -->
       </li>
       <li class="timeAxisBox"></li>

@@ -12,38 +12,90 @@
         <p class="ptext">手机:18523482459</p>
       </li>
       <li class="socialmedia">
-        <a href="https://github.com/Ekida1" target="_blank"><img class="socialmediaicon github" v-show="turnOnLastAnimation" key="github" src="/api/call_github_27ab678.png" alt=""></a>
-        <a href="https://www.zhihu.com/people/chang-yi-ming-18/activities" target="_blank"><img class="socialmediaicon zhihu" v-show="turnOnLastAnimation" key="zhihu" src="/api/call_zhihu_4567c70.png" alt=""></a>
-        <a href="https://weibo.com/coolhi/" target="_blank"><img class="socialmediaicon weibo" v-show="turnOnLastAnimation" key="weibo" src="/api/call_weibo_53e7ffa.png" alt=""></a>
-        <img class="socialmediaicon wechat" @click="wechatDialogVisible = true" v-show="turnOnLastAnimation" key="wechat" src="/api/call_wx_ac6ac72.png" alt="">
+        <a href="https://github.com/Ekida1" target="_blank">
+          <img
+            class="socialmediaicon github"
+            v-show="turnOnLastAnimation"
+            key="github"
+            src="/static/call_github_27ab678.png"
+            alt
+          >
+        </a>
+        <a href="https://www.douban.com/people/73400283/" target="_blank">
+          <img
+            class="socialmediaicon douban"
+            v-show="turnOnLastAnimation"
+            key="douban"
+            src="/static/call_douban_4567c70.png"
+            alt
+          >
+        </a>
+        <a href="https://weibo.com/coolhi/" target="_blank">
+          <img
+            class="socialmediaicon weibo"
+            v-show="turnOnLastAnimation"
+            key="weibo"
+            src="/static/call_weibo_53e7ffa.png"
+            alt
+          >
+        </a>
+        <img
+          class="socialmediaicon wechat"
+          @click="wechatDialogVisible = true"
+          v-show="turnOnLastAnimation"
+          key="wechat"
+          src="/static/call_wx_ac6ac72.png"
+          alt
+        >
       </li>
       <li class="footBtnContainer">
-        <a href="/api/EkidaResume.docx" download="EkidaResume" class="fotBtn downlodaResume" v-show="turnOnLastAnimation">
+        <a
+          href="/static/EkidaResume.docx"
+          download="EkidaResume"
+          class="fotBtn downlodaResume"
+          v-show="turnOnLastAnimation"
+        >
           <i class="el-icon-download"></i>下载简历
         </a>
-        <div class="fotBtn phoneCheck" @click="phoneCheckDialogVisible = true" v-show="turnOnLastAnimation"><i class="el-icon-mobile-phone"></i>手机查看</div>
+        <div
+          class="fotBtn phoneCheck"
+          @click="phoneCheckDialogVisible = true"
+          v-show="turnOnLastAnimation"
+        >
+          <i class="el-icon-mobile-phone"></i>手机查看
+        </div>
       </li>
     </ul>
-    <img class="resumeFooter" src="/api/bluefooter.png" alt="">
+    <img class="resumeFooter" src="/static/bluefooter.png" alt>
     <!-- <div class="resumeFooter"></div> -->
-    <el-dialog :visible.sync="wechatDialogVisible" custom-class="QRcodeModal" lock-scroll  :modal-append-to-body="false">
+    <el-dialog
+      :visible.sync="wechatDialogVisible"
+      custom-class="QRcodeModal"
+      lock-scroll
+      :modal-append-to-body="false"
+    >
       <span slot="title" class="dialog-title">{{wechatdialogTitle}}</span>
       <div class="dialogContent">
-        <img class="wechatQRcode" src="/api/wechatfriend.jpg" alt="">
+        <img class="wechatQRcode" src="/static/wechatfriend.jpg" alt>
       </div>
       <!-- <span slot="footer" class="dialog-footer">
           <el-button @click="wechatDialogVisible = false">关闭</el-button>
-        </span> -->
+      </span>-->
     </el-dialog>
 
-    <el-dialog :visible.sync="phoneCheckDialogVisible" custom-class="QRcodeModal" lock-scroll  :modal-append-to-body="false">
+    <el-dialog
+      :visible.sync="phoneCheckDialogVisible"
+      custom-class="QRcodeModal"
+      lock-scroll
+      :modal-append-to-body="false"
+    >
       <span slot="title" class="dialog-title">{{wechatdialogTitle}}</span>
       <div class="dialogContent">
-        <img class="phoneQRcode" src="/api/wechatfriend.jpg" alt="">
+        <img class="phoneQRcode" src="/static/QRcode.png" alt>
       </div>
       <!-- <span slot="footer" class="dialog-footer">
           <el-button @click="phoneCheckDialogVisible = false">关闭</el-button>
-        </span> -->
+      </span>-->
     </el-dialog>
   </div>
 </template>
@@ -61,7 +113,8 @@ export default {
       wechatdialogTitle: "扫一扫手机查看",
       phoneCheckDialogVisible: false
     };
-  }
+  },
+  mounted() {}
 };
 </script>
 
@@ -113,7 +166,7 @@ export default {
 
       .socialmediaicon {
         width: 9%;
-        padding: 10px 10px;
+        margin: 10px 10px;
         animation: bounceUp 700ms linear;
         -webkit-animation: bounceY 700ms linear;
 
@@ -148,7 +201,7 @@ export default {
         }
       }
 
-      .zhihu {
+      .douban {
         animation-delay: 500ms;
         -webkit-animation-delay: 500ms;
       }
@@ -231,7 +284,7 @@ export default {
     right: 0;
     width: 100%;
     height: 10%;
-    // background: url('/api/bluefooter.png') repeat-x 0 0;
+    // background: url('/static/bluefooter.png') repeat-x 0 0;
     animation: Xscroll 10000ms linear infinite alternate;
     -webkit-animation: Xscroll 10000ms linear infinite alternate;
 

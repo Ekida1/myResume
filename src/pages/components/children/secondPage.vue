@@ -20,7 +20,7 @@
         <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="Visula">Visula Studio Code</li>
       <!-- </transition-group> -->
     </ul>
-    <img class="resumeFooter" src="/api/greenfooter.png" alt="">
+    <img class="resumeFooter" src="/static/greenfooter.png" alt="">
  </div>
 </template>
 <script>
@@ -121,7 +121,7 @@ export default {
     right: 0;
     width: 100%;
     height: 10%;
-    // background: url('/api/bluefooter.png') repeat-x 0 0;
+    // background: url('/static/bluefooter.png') repeat-x 0 0;
     animation: Xscroll 10000ms linear infinite alternate;
     -webkit-animation: Xscroll 10000ms linear infinite alternate;
 

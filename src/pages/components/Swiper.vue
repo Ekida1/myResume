@@ -1,6 +1,8 @@
 <template>
   <div class="basement">
-    <a href="https://github.com/Ekida1/myResume"><img class="githubtag" src="/api/githubtag.png" alt=""></a>
+    <a href="https://github.com/Ekida1/myResume">
+      <img class="githubtag" src="/static/githubtag.png" alt>
+    </a>
     <!-- Optional controls -->
     <swiper :options="swiperOption" ref="bigSwiper">
       <!-- slides -->

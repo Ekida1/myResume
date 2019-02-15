@@ -1,7 +1,7 @@
 <template>
   <div class="basement">
     <div class="profileContainer">
-      <img class="profile" src="/api/profile.jpg" alt="">
+      <img class="profile" src="/static/profile.jpg" alt="">
     </div>
     <transition name="fadein" appear enter-active-class="animated fadeInDown" appear-active-class="animated fadeInDown">
       <div class="helloName" v-show="turnOnIndexAnimation">Aloha!我叫常益铭</div>
@@ -17,7 +17,7 @@
       <div class="dialogContent">
         <swiper :options="swiperOption" ref="pageSwiper">
           <swiper-slide>
-            <img class="cartoon" src="/api/cartoon.png" alt="">
+            <img class="cartoon" src="/static/cartoon.png" alt="">
             <p>姓名:&nbsp;常益铭</p>
             <p>年龄:&nbsp;23岁</p>
             <p>工作经验:&nbsp;半年</p>

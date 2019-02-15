@@ -6,52 +6,52 @@
         <i class="el-icon-share litteicon"></i>
         <i class="el-icon-star-on staricon"></i>
         <div class="textBox">
-        <span class="ptext">Ekida的个人网站</span>
-        <br>
-        <span class="ptext">我的个人网站。
-              <br>
-              <a href="">xxx</a>
-            </span>
-            </div>
+          <span class="ptext">Ekida的个人网站</span>
+          <br>
+          <span class="ptext">我的个人简历网站。
+            <br>
+            <a href="http://106.13.89.121:70">http://106.13.89.121:70</a>
+          </span>
+        </div>
       </li>
       <li class="projectBox pb2" v-show="turnOnForthAnimation">
         <i class="el-icon-share litteicon"></i>
         <i class="el-icon-star-on staricon"></i>
         <div class="textBox">
-        <span class="ptext">旅游网前端app</span>
-        <br>
-        <span class="ptext">用Vue搭建的导航网。
-              <br>
-              <a href="">xxxbbb</a>
-            </span>
+          <span class="ptext">小钻石前端导航</span>
+          <br>
+          <span class="ptext">我的前端工具导航网页
+            <br>
+            <a href="http://106.13.89.121:72">http://106.13.89.121:72</a>
+          </span>
         </div>
       </li>
       <li class="projectBox pb3" v-show="turnOnForthAnimation">
         <i class="el-icon-share litteicon"></i>
         <i class="el-icon-star-on staricon"></i>
         <div class="textBox">
-        <span class="ptext">React音乐网站</span>
-        <br>
-        <span class="ptext">用React+jPlayer插件搭建的web音乐播放器。
-                <br>
-                <a href="">xxxccc</a>
-              </span>
+          <span class="ptext">MINGXIE个人网站</span>
+          <br>
+          <span class="ptext">音乐家，钢琴家的个人网站
+            <br>
+            <a href="http://106.13.89.121:71">http://106.13.89.121:71</a>
+          </span>
         </div>
       </li>
       <li class="projectBox pb4" v-show="turnOnForthAnimation">
         <i class="el-icon-share litteicon"></i>
         <i class="el-icon-star-on staricon"></i>
         <div class="textBox">
-        <span class="ptext">更多关注Github</span>
-        <br>
-        <span class="ptext">在Github查看更多。
-                <br>
-                <a href="https://github.com/Ekida1">https://github.com/Ekida1</a>
-              </span>
+          <span class="ptext">更多关注Github</span>
+          <br>
+          <span class="ptext">在Github查看更多。
+            <br>
+            <a href="https://github.com/Ekida1">https://github.com/Ekida1</a>
+          </span>
         </div>
       </li>
     </ul>
-    <img class="resumeFooter" src="/api/pinkfooter.png" alt="">
+    <img class="resumeFooter" src="/static/pinkfooter.png" alt>
     <!-- <div class="resumeFooter"></div> -->
   </div>
 </template>
@@ -162,7 +162,7 @@ export default {
     right: 0;
     width: 100%;
     height: 10%;
-    // background: url('/api/footer.png');
+    // background: url('/static/footer.png');
     animation: Xscroll 40000ms linear infinite alternate;
     -webkit-animation: Xscroll 40000ms linear infinite alternate;
 

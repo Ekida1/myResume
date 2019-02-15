@@ -5,11 +5,11 @@
       <transition-group name="fadeInRight" appear enter-active-class="animated fadeInRight" appear-active-class="animated fadeInRight">
       <li class="ptext location" key="location" v-show="turnOnFifthAnimation"><i class="el-icon-loading beforeicon"></i>期待工作地点:&nbsp;成都市环内</li>
       <li class="ptext type" key="type" v-show="turnOnFifthAnimation"><i class="el-icon-loading beforeicon"></i>公司行业：&nbsp;互联网/计算机企业</li>
-      <li class="ptext salary"  key="salary" v-show="turnOnFifthAnimation"><i class="el-icon-loading beforeicon"></i>期待薪资：&nbsp;6k-8k可调整</li>
+      <li class="ptext salary"  key="salary" v-show="turnOnFifthAnimation"><i class="el-icon-loading beforeicon"></i>期待薪资：&nbsp;8k-10k可调整</li>
       <li class="ptext wish" key="wish" v-show="turnOnFifthAnimation"><i class="el-icon-loading beforeicon"></i>希望进入一个活跃,开放,自由,乐于分享,乐于创造的团队</li>
       </transition-group>
     </ul>
-    <img class="resumeFooter" src="/api/heavygreenfooter.png" alt="">
+    <img class="resumeFooter" src="/static/heavygreenfooter.png" alt="">
 </div>
 </template>
 <script>
@@ -68,7 +68,7 @@ export default {
     right: 0;
     width: 100%;
     height: 10%;
-    // background: url('/api/bluefooter.png') repeat-x 0 0;
+    // background: url('/static/bluefooter.png') repeat-x 0 0;
     animation: Xscroll 10000ms linear infinite alternate;
     -webkit-animation: Xscroll 10000ms linear infinite alternate;
 
