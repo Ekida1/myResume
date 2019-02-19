@@ -10,7 +10,7 @@
         <span class="monthFlag">06月</span>
         <i class="el-icon-location-outline circleIcon"></i>
         <!-- <transition name="bounce" appear enter-active-class="animated bounce" appear-active-class="animated bounce"> -->
-        <div class="labelText lt1" v-show="turnOnThirdAnimation">拿到全日制本科毕业证和工科学士学位证</div>
+        <div class="labelText lt1" v-show="turnOnThirdAnimation">拿到 重庆邮电大学 全日制本科毕业证和工科学士学位证</div>
         <!-- </transition> -->
       </li>
       <li class="workItem monthIteam">

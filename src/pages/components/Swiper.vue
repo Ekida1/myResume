@@ -8,7 +8,7 @@
       <!-- slides -->
       <swiper-slide>
         <div class="spwier-item0">
-          <index-page :turnOnIndexAnimation="turnOnIndexAnimation"></index-page>
+          <index-page :turnOnIndexAnimation="turnOnIndexAnimation" @on-change-open="openCover"></index-page>
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -38,6 +38,13 @@
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
+    <transition
+      name="bounce"
+      enter-active-class="animated bounceInDown"
+      leave-active-class="animated bounceOutUp"
+    >
+      <cover-curtains v-show="isShowCurtains" @on-change-close="closeCover"></cover-curtains>
+    </transition>
   </div>
 </template>
 
@@ -48,6 +55,7 @@ import ThirdPage from "./children/thirdPage";
 import ForthPage from "./children/forthPage";
 import FifthPage from "./children/fifthPage";
 import lastPage from "./children/lastPage";
+import coverCurtains from "./coverCurtains";
 export default {
   name: "HomeSwiper",
   components: {
@@ -56,10 +64,12 @@ export default {
     ThirdPage,
     ForthPage,
     FifthPage,
-    lastPage
+    lastPage,
+    coverCurtains
   },
   data() {
     return {
+      isShowCurtains: false,
       turnOnIndexAnimation: true,
       turnOnSecondAnimation: false,
       turnOnThirdAnimation: false,
@@ -131,6 +141,14 @@ export default {
   computed: {
     swiper() {
       return this.$refs.bigSwiper.swiper;
+    }
+  },
+  methods: {
+    openCover() {
+      this.isShowCurtains = true;
+    },
+    closeCover() {
+      this.isShowCurtains = false;
     }
   },
   mounted() {

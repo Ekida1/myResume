@@ -1,27 +1,31 @@
 <template>
- <div class="basement">
+  <div class="basement">
     <div class="secondTitle">技术专长</div>
 
     <ul class="labelGroups">
       <!-- <transition-group name="bounce" appear enter-active-class="animated fadeInDown" appear-active-class="animated fadeInDown"> -->
-        <!-- v-show="turnOnSecondAnimation" -->
-        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="HTML">HTML/HTML5</li>
-        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="CSS">CSS/CSS3</li>
-        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="JavaScript">JavaScript</li>
-        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="AngularJs">AngularJs</li>
-        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="Vue">Vue.js</li>
-        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="React">React</li>
-        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="Animate">Animate.css</li>
-        <li class="skillLabel sl1" v-show="turnOnSecondAnimation" key="Github">Git/Github</li>
-        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="Gulp">Gulp</li>
-        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="Grunt">Grunt</li>
-        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="chart">E-chart</li>
-        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="D3">D3.js</li>
-        <li class="skillLabel sl2" v-show="turnOnSecondAnimation" key="Visula">Visula Studio Code</li>
-      <!-- </transition-group> -->
+      <!-- v-show="turnOnSecondAnimation" -->
+      <li
+        class="skillLabel"
+        :class="item.row"
+        v-show="turnOnSecondAnimation"
+        v-for="item in skillData"
+        @click="showProgress(item.text,item.progress)"
+        :key="item.key"
+      >{{item.text}}</li>
     </ul>
-    <img class="resumeFooter" src="/static/greenfooter.png" alt="">
- </div>
+    <transition
+      name="flip"
+      enter-active-class="animated flipInX"
+      leave-active-class="animated flipOutX"
+    >
+      <section v-show="isProgressShow" class="progressSection">
+        <div style="width:94px;position:relative;top:67px;font-size:25px">{{this.text}}</div>
+        <el-progress type="circle" :width="168" :stroke-width="20" :percentage="this.percentage"></el-progress>
+      </section>
+    </transition>
+    <img class="resumeFooter" src="/static/greenfooter.png" alt>
+  </div>
 </template>
 <script>
 // import animate from "animate.css";
@@ -29,6 +33,88 @@ export default {
   name: "SecondPage",
   props: {
     turnOnSecondAnimation: Boolean
+  },
+  data() {
+    return {
+      isProgressShow: false,
+      percentage: 0, //进度条百分比
+      text: "暂无",
+      skillData: [
+        {
+          row: "sl1",
+          key: "HTML",
+          text: "HTML/HTML5",
+          progress: "75"
+        },
+        {
+          row: "sl1",
+          key: "CSS",
+          text: "CSS/CSS3",
+          progress: "70"
+        },
+        {
+          row: "sl1",
+          key: "JavaScript",
+          text: "JavaScript",
+          progress: "80"
+        },
+        {
+          row: "sl2",
+          key: "AngularJs",
+          text: "AngularJs",
+          progress: "40"
+        },
+        {
+          row: "sl2",
+          key: "Vue",
+          text: "VueJS",
+          progress: "90"
+        },
+        {
+          row: "sl2",
+          key: "React",
+          text: "React",
+          progress: "30"
+        },
+        {
+          row: "sl1",
+          key: "Animate",
+          text: "Animation",
+          progress: "70"
+        },
+        {
+          row: "sl1",
+          key: "Github",
+          text: "Git/Github",
+          progress: "60"
+        },
+        {
+          row: "sl2",
+          key: "Gulp",
+          text: "Gulp",
+          progress: "30"
+        },
+        {
+          row: "sl2",
+          key: "Grunt",
+          text: "Grunt",
+          progress: "30"
+        },
+        {
+          row: "sl1",
+          key: "chart",
+          text: "E-charts",
+          progress: "90"
+        }
+      ]
+    };
+  },
+  methods: {
+    showProgress(text, progress) {
+      this.isProgressShow = true;
+      this.text = text;
+      this.percentage = progress;
+    }
   }
 };
 </script>
@@ -112,6 +198,19 @@ export default {
       animation-delay: 800ms;
       -webkit-animation-delay: 800ms;
     }
+  }
+
+  .progressSection {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 390px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    // width: 500px;
+    max-width: 500px;
+    min-width: 160px;
   }
 
   .resumeFooter {

@@ -1,46 +1,28 @@
 <template>
   <div class="basement">
     <div class="profileContainer">
-      <img class="profile" src="/static/profile.jpg" alt="">
+      <img class="profile" src="/static/profile.jpg" alt>
     </div>
-    <transition name="fadein" appear enter-active-class="animated fadeInDown" appear-active-class="animated fadeInDown">
+    <transition
+      name="fadein"
+      appear
+      enter-active-class="animated fadeInDown"
+      appear-active-class="animated fadeInDown"
+    >
       <div class="helloName" v-show="turnOnIndexAnimation">Aloha!我叫常益铭</div>
     </transition>
-    <transition-group name="fadeinup" appear enter-active-class="animated fadeInUp" appear-active-class="animated fadeInUp">
+    <transition-group
+      name="fadeinup"
+      appear
+      enter-active-class="animated fadeInUp"
+      appear-active-class="animated fadeInUp"
+    >
       <div class="helloSaying" key="helloSaying" v-show="turnOnIndexAnimation">一腔热血的激情 · 一个像素的执着</div>
       <div class="careePositon" key="careePositon" v-show="turnOnIndexAnimation">一个爱设计的前端工程师</div>
     </transition-group>
-    <el-button type="text" class="readmeBtn" @click="dialogVisible = true"><span class="btnText">ReadMe.md</span></el-button>
-
-    <el-dialog :visible.sync="dialogVisible" custom-class="fileModal" :lock-scroll="true" :modal-append-to-body="false">
-      <span slot="title" class="dialog-title">基本资料</span>
-      <div class="dialogContent">
-        <swiper :options="swiperOption" ref="pageSwiper">
-          <swiper-slide>
-            <img class="cartoon" src="/static/cartoon.png" alt="">
-            <p>姓名:&nbsp;常益铭</p>
-            <p>年龄:&nbsp;23岁</p>
-            <p>工作经验:&nbsp;半年</p>
-            <p>毕业院校:&nbsp;重庆邮电大学</p>
-            <p>学历:&nbsp;本科</p>
-            <p>应聘职位:&nbsp;WEB前端工程师</p>
-          </swiper-slide>
-          <swiper-slide>
-            <p>●主修技能：</p>
-            <p>语言: html, css, less, javaScript(ES5, ES6)</p>
-            <p>框架: jQuery, AngularJS（1.5版本）, Vue2.0 , 初学D3.js, E-chart，Bootstrap</p>
-            <p>工具: VSCode, Git，Gulp等</p>
-          </swiper-slide>
-          <div class="swiper-button-prev" slot="pagination"></div>
-          <div class="swiper-button-next" slot="pagination"></div>
-        </swiper>
-
-      </div>
-      <!-- <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false">关闭</el-button>
-      </span> -->
-    </el-dialog>
-
+    <el-button type="text" class="readmeBtn" @click="handleCover">
+      <span class="btnText">ReadMe.md</span>
+    </el-button>
   </div>
 </template>
 
@@ -53,7 +35,6 @@ export default {
   },
   data() {
     return {
-      dialogVisible: false,
       swiperOption: {
         // mousewheel: true,
         effect: "flip",
@@ -63,6 +44,11 @@ export default {
         }
       }
     };
+  },
+  methods: {
+    handleCover() {
+      this.$emit("on-change-open");
+    }
   }
 };
 </script>
@@ -188,26 +174,6 @@ export default {
       right: 0;
       top: 0;
     }
-  }
-}
-
-.dialog-title {
-  font-size: 25px;
-}
-
-.dialogContent {
-  margin: 0 50px;
-  font-size: 15px;
-  color: #0062B9;
-  line-height: 55px;
-
-  .cartoon {
-    position: absolute;
-    left: 75%;
-    top: 0;
-    margin-right: 30px;
-    width: 120px;
-    height: 120px;
   }
 }
 
